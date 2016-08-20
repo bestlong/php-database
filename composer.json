@@ -9,6 +9,7 @@
         }
     ],
     "license": "MIT",
+    "keywords": "database",
     "require": {
         "php": ">=5.4.0"
     },
