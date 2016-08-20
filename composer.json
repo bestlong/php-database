@@ -1,5 +1,6 @@
 {
     "name": "bestlong/database",
+    "description": "Database package",
     "type": "library",
     "authors": [
         {
