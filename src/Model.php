@@ -37,4 +37,14 @@ class Model
     {
         return $this->attributes[$key] = $value;
     }
+
+    public function __isset($name)
+    {
+        return isset($this->attributes[$name]);
+    }
+
+    public function __unset($name)
+    {
+        unset($this->attributes[$name]);
+    }
 }
