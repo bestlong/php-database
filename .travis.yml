@@ -6,4 +6,7 @@ php:
 
 sudo: false
 
+before_script:
+  - composer install --prefer-source --dev
+
 script: vendor/bin/phpunit
