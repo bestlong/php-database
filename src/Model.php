@@ -18,8 +18,18 @@ class Model
     /** @var array 資料表的欄位列表 */
     protected $fields = array();
 
-    public function __construct()
+    protected $attributes = [];
+
+    public function __construct(array $attributes = [])
     {
         $this->table = get_class($this);
+        foreach ($attributes as $key => $attribute) {
+            $this->attributes[$key] = $attribute;
+        }
+    }
+
+    public function __get($key)
+    {
+        return $this->attributes[$key];
     }
 }
