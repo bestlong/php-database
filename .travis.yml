@@ -8,8 +8,10 @@ php:
 
 sudo: false
 
-before_script:
+before_install:
   - phpenv config-rm xdebug.ini
+
+before_script:
   - composer install --prefer-source --dev
 
 script: vendor/bin/phpunit
