@@ -4,20 +4,20 @@ class ModelTest extends PHPUnit_Framework_TestCase
 {
     public function testSetValueByConstruct()
     {
-        $model = new \Bestlong\Database\Model(['name' => 'Allen']);
+        $model = new MyModel(['name' => 'Allen']);
         $this->assertEquals('Allen', $model->name);
     }
 
     public function testSetValueBySetter()
     {
-        $model = new \Bestlong\Database\Model();
+        $model = new MyModel();
         $model->name = 'Allen';
         $this->assertEquals('Allen', $model->name);
     }
 
     public function testIsSetAndUnSet()
     {
-        $model = new \Bestlong\Database\Model();
+        $model = new MyModel();
         $this->assertFalse(isset($model->name));
 
         $model->name = 'Allen';
@@ -26,4 +26,8 @@ class ModelTest extends PHPUnit_Framework_TestCase
         unset($model->name);
         $this->assertFalse(isset($model->name));
     }
+}
+
+class MyModel extends \Bestlong\Database\Model
+{
 }

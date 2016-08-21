@@ -6,7 +6,7 @@ namespace Bestlong\Database;
  * Class Model
  * @package Bestlong\Database
  */
-class Model
+abstract class Model
 {
 
     /** @var string 資料表名稱 */
