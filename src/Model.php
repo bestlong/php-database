@@ -23,9 +23,20 @@ abstract class Model
     public function __construct(array $attributes = [])
     {
         $this->table = get_class($this);
+
         foreach ($attributes as $key => $attribute) {
             $this->attributes[$key] = $attribute;
         }
+    }
+
+    public function getTable()
+    {
+        return $this->table;
+    }
+
+    public function setTable($table)
+    {
+        $this->table = $table;
     }
 
     public function __get($key)
