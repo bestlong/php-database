@@ -10,7 +10,6 @@ sudo: false
 
 before_script:
   - phpenv config-rm xdebug.ini
-  - composer selfupdate
   - composer install --prefer-source --dev
 
 script: vendor/bin/phpunit
