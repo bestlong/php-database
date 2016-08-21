@@ -24,8 +24,8 @@ abstract class Model
     {
         $this->table = get_class($this);
 
-        foreach ($attributes as $key => $attribute) {
-            $this->attributes[$key] = $attribute;
+        foreach ($attributes as $name => $attribute) {
+            $this->attributes[$name] = $attribute;
         }
     }
 
@@ -39,14 +39,14 @@ abstract class Model
         $this->table = $table;
     }
 
-    public function __get($key)
+    public function __get($name)
     {
-        return $this->attributes[$key];
+        return $this->attributes[$name];
     }
 
-    public function __set($key, $value)
+    public function __set($name, $value)
     {
-        return $this->attributes[$key] = $value;
+        return $this->attributes[$name] = $value;
     }
 
     public function __isset($name)
