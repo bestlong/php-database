@@ -32,4 +32,9 @@ class Model
     {
         return $this->attributes[$key];
     }
+
+    public function __set($key, $value)
+    {
+        return $this->attributes[$key] = $value;
+    }
 }
